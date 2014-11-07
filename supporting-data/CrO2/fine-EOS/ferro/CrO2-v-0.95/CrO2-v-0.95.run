@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=18:00:00
+#PBS -l nodes=1:ppn=4:opteron4
+#PBS -j oe
+#PBS -N CrO2/fine-EOS/ferro/CrO2-v-0.95
+
+cd $PBS_O_WORKDIR
+mpirun -np 4 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp CrO2-v-0.95.in -npool 1 | tee CrO2-v-0.95.out
+eclean
+# end

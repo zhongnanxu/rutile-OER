@@ -1,0 +1,80 @@
+&CONTROL
+ calculation = 'relax'
+ tstress = .True.
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home/camp/zhonxu/pseudo'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 32
+ ntyp = 3
+ nbnd = 334
+ tot_magnetization = 15
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0.6
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 7
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Cr1 51.996 cr_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37332 0 0 1
+ O0 0.00000 0.50000 0.39448 0 0 1
+ Cr1 0.25000 0.50000 0.44736 0 0 1
+ Cr1 0.00000 0.00000 0.44879 0 0 1
+ O0 0.25000 0.80000 0.44809 0 0 1
+ O0 0.25000 0.20000 0.44808 0 0 1
+ O0 0.00000 0.50000 0.49648 0 0 1
+ O0 0.00000 0.00000 0.52517 0 0 1
+ Cr1 0.25000 0.00000 0.57707 0 0 1
+ Cr1 0.00000 0.50000 0.56702 0 0 1
+ O0 0.25000 0.70000 0.57751 0 0 1
+ O0 0.25000 0.30000 0.57759 0 0 1
+ O0 0.00000 0.00000 0.62559 0 0 1
+ O0 0.50000 0.00000 0.37324 0 0 1
+ O0 0.50000 0.50000 0.39471 0 0 1
+ Cr1 0.75000 0.50000 0.44736 0 0 1
+ Cr1 0.50000 0.00000 0.44879 0 0 1
+ O0 0.75000 0.80000 0.44804 0 0 1
+ O0 0.75000 0.20000 0.44807 0 0 1
+ O0 0.50000 0.50000 0.49984 0 0 1
+ O0 0.50000 0.00000 0.52536 0 0 1
+ Cr1 0.75000 0.00000 0.57717 0 0 1
+ Cr1 0.50000 0.50000 0.58028 0 0 1
+ O0 0.75000 0.70000 0.57636 0 0 1
+ O0 0.75000 0.30000 0.57635 0 0 1
+ O0 0.50000 0.00000 0.62576 0 0 1
+ H2 -0.00071 0.63639 0.37489 1 1 1
+ H2 0.49939 0.63688 0.37531 1 1 1
+ H2 0.15882 0.02761 0.36072 1 1 1
+ H2 0.65890 0.02753 0.36070 1 1 1
+ O0 0.51935 0.49952 0.65321 1 1 1
+ H2 0.36768 0.49754 0.67002 1 1 1
+CELL_PARAMETERS {angstrom}
+ 5.8 0.0 0.0
+ 0.0 6.19425540319 0.0
+ 0.0 0.0 26.1942554032

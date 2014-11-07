@@ -1,0 +1,81 @@
+&CONTROL
+ calculation = 'relax'
+ tprnfor = .True.
+ outdir = '/scratch/1089126.gilgamesh.cheme.cmu.edu'
+ disk_io = 'none'
+ pseudo_dir = '/home-research/zhongnanxu/pseudopotentials/gbrv_espresso_pseudo_v1.01'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 33
+ ntyp = 3
+ nbnd = 343
+ tot_magnetization = 15
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0.6
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 5
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Cr1 51.996 cr_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37605 0 0 1
+ O0 0.00000 0.50000 0.39712 0 0 1
+ Cr1 0.25000 0.50000 0.44928 0 0 1
+ Cr1 0.00000 0.00000 0.44947 0 0 1
+ O0 0.25000 0.80000 0.44898 0 0 1
+ O0 0.25000 0.20000 0.44907 0 0 1
+ O0 0.00000 0.50000 0.49725 0 0 1
+ O0 0.00000 0.00000 0.52435 0 0 1
+ Cr1 0.25000 0.00000 0.57571 0 0 1
+ Cr1 0.00000 0.50000 0.56667 0 0 1
+ O0 0.25000 0.70000 0.57504 0 0 1
+ O0 0.25000 0.30000 0.57650 0 0 1
+ O0 0.00000 0.00000 0.62236 0 0 1
+ O0 0.50000 0.00000 0.37580 0 0 1
+ O0 0.50000 0.50000 0.39713 0 0 1
+ Cr1 0.75000 0.50000 0.44929 0 0 1
+ Cr1 0.50000 0.00000 0.44922 0 0 1
+ O0 0.75000 0.80000 0.44902 0 0 1
+ O0 0.75000 0.20000 0.44905 0 0 1
+ O0 0.50000 0.50000 0.49900 0 0 1
+ O0 0.50000 0.00000 0.52439 0 0 1
+ Cr1 0.75000 0.00000 0.57557 0 0 1
+ Cr1 0.50000 0.50000 0.57599 0 0 1
+ O0 0.75000 0.70000 0.57509 0 0 1
+ O0 0.75000 0.30000 0.57651 0 0 1
+ O0 0.50000 0.00000 0.62211 0 0 1
+ H2 -0.00061 0.63831 0.37823 1 1 1
+ H2 0.49951 0.63945 0.37870 1 1 1
+ H2 0.15869 0.02802 0.36353 1 1 1
+ H2 0.65833 0.02904 0.36327 1 1 1
+ O0 0.49986 0.54627 0.65284 0 1 1
+ O0 0.50022 0.35847 0.68146 0 1 1
+ H2 0.49989 0.41626 0.71674 0 1 1
+CELL_PARAMETERS {angstrom}
+ 5.8 0.0 0.0
+ 0.0 6.19425540319 0.0
+ 0.0 0.0 26.1942554032

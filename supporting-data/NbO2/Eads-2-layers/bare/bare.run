@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=48:00:00
+#PBS -j oe
+#PBS -N NbO2/bare
+#PBS -l nodes=2:ppn=8:xeon8
+
+cd $PBS_O_WORKDIR
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp bare.in -npool 1 | tee bare.out
+eclean
+# end

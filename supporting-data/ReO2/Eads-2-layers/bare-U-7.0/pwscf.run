@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=48:00:00
+#PBS -j oe
+#PBS -N ReO2/Eads-2-layers/bare-U-7.0
+#PBS -l nodes=2:ppn=8:xeon8
+
+cd $PBS_O_WORKDIR
+mpirun -np 16 /home/opt/el6/sl230s/espresso-5.0.3-sl230s-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp pwscf.in -npool 4 | tee pwscf.out
+eclean
+# end

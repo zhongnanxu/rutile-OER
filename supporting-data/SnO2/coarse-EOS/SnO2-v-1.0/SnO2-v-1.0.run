@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=18:00:00
+#PBS -l nodes=1:ppn=4:opteron4
+#PBS -j oe
+#PBS -N SnO2/coarse-EOS/SnO2-v-1.0
+
+cd $PBS_O_WORKDIR
+mpirun -np 4 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp SnO2-v-1.0.in -npool 1 | tee SnO2-v-1.0.out
+eclean
+# end

@@ -1,0 +1,17 @@
+loading modules
+dropbox is Dropbox isn't running!
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+mpiexec_n16: mpd_uncaught_except_tb handling:
+  <type 'exceptions.OSError'>: [Errno 2] No such file or directory
+    /opt/intel/impi/4.0.0.028/intel64/bin/mpiexec  1319  collect_args
+        parmdb[('cmdline','-gwdir')]       = os.path.abspath(os.getcwd())
+    /opt/intel/impi/4.0.0.028/intel64/bin/mpiexec  591  mpiexec
+        collect_args(tempargv,localArgSets)
+    /opt/intel/impi/4.0.0.028/intel64/bin/mpiexec  3205  <module>
+        mpiexec()
+tee: pwscf.out: No such file or directory
+mv: cannot stat `/scratch/1098812.gilgamesh.cheme.cmu.edu/*': No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+find: cannot get current directory: No such file or directory

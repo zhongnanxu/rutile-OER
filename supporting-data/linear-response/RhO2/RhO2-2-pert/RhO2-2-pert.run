@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -l walltime=48:00:00
+#PBS -j oe
+#PBS -N linear-response/RhO2-2-pert
+#PBS -l nodes=2:ppn=8:xeon8
+
+cd $PBS_O_WORKDIR
+cp -r pwscf.* alpha_-0.15/
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp alpha_-0.15/alpha_-0.15.in -npool 1 > results/alpha_-0.15.out
+rm -fr alpha_-0.15/pwscf.*
+cp -r pwscf.* alpha_-0.07/
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp alpha_-0.07/alpha_-0.07.in -npool 1 > results/alpha_-0.07.out
+rm -fr alpha_-0.07/pwscf.*
+cp -r pwscf.* alpha_0/
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp alpha_0/alpha_0.in -npool 1 > results/alpha_0.out
+rm -fr alpha_0/pwscf.*
+cp -r pwscf.* alpha_0.07/
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp alpha_0.07/alpha_0.07.in -npool 1 > results/alpha_0.07.out
+rm -fr alpha_0.07/pwscf.*
+cp -r pwscf.* alpha_0.15/
+mpirun -np 16 /home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x -inp alpha_0.15/alpha_0.15.in -npool 1 > results/alpha_0.15.out
+rm -fr alpha_0.15/pwscf.*
+# end

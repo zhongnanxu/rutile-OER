@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -l walltime=18:00:00
+#PBS -j oe
+#PBS -N TiO2/fine-EOS/ferro/TiO2-v-1.10
+#PBS -l nodes=1:ppn=4
+
+cd $PBS_O_WORKDIR
+sed -i 's@${PBS_JOBID}@'${PBS_JOBID}'@' pwscf.in
+mpirun -np 4 /home-research/zhongnanxu/opt/espresso-5.0.2-ifort-internal-lapack/bin/pw.x -inp pwscf.in -npool 4 | tee pwscf.out
+
+mv /scratch/${PBS_JOBID}/* .
+rm -fr /scratch/${PBS_JOBID}
+eclean
+# end

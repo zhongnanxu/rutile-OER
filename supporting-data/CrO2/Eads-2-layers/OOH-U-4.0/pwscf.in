@@ -1,0 +1,80 @@
+&CONTROL
+ calculation = 'relax'
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home-research/zhongnanxu/pseudopotentials/gbrv_espresso_pseudo_v1.01'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 33
+ ntyp = 3
+ nbnd = 343
+ tot_magnetization = 15
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0.6
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 4
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Cr1 51.996 cr_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37651 0 0 1
+ O0 0.00000 0.50000 0.39830 0 0 1
+ Cr1 0.25000 0.50000 0.45011 0 0 1
+ Cr1 0.00000 0.00000 0.44895 0 0 1
+ O0 0.25000 0.80000 0.44911 0 0 1
+ O0 0.25000 0.20000 0.44919 0 0 1
+ O0 0.00000 0.50000 0.49788 0 0 1
+ O0 0.00000 0.00000 0.52381 0 0 1
+ Cr1 0.25000 0.00000 0.57003 0 0 1
+ Cr1 0.00000 0.50000 0.56684 0 0 1
+ O0 0.25000 0.70000 0.57424 0 0 1
+ O0 0.25000 0.30000 0.57564 0 0 1
+ O0 0.00000 0.00000 0.61957 0 0 1
+ O0 0.50000 0.00000 0.37623 0 0 1
+ O0 0.50000 0.50000 0.39835 0 0 1
+ Cr1 0.75000 0.50000 0.45011 0 0 1
+ Cr1 0.50000 0.00000 0.44883 0 0 1
+ O0 0.75000 0.80000 0.44912 0 0 1
+ O0 0.75000 0.20000 0.44915 0 0 1
+ O0 0.50000 0.50000 0.49906 0 0 1
+ O0 0.50000 0.00000 0.52387 0 0 1
+ Cr1 0.75000 0.00000 0.58238 0 0 1
+ Cr1 0.50000 0.50000 0.57488 0 0 1
+ O0 0.75000 0.70000 0.57636 0 0 1
+ O0 0.75000 0.30000 0.57747 0 0 1
+ O0 0.50000 0.00000 0.61882 0 0 1
+ H2 -0.00044 0.63959 0.37995 1 1 1
+ H2 0.49959 0.64083 0.38049 1 1 1
+ H2 0.15851 0.02933 0.36403 1 1 1
+ H2 0.65805 0.03010 0.36374 1 1 1
+ O0 0.49986 0.54494 0.65159 0 1 1
+ O0 0.50022 0.35629 0.68047 0 1 1
+ H2 0.49989 0.41421 0.71572 0 1 1
+CELL_PARAMETERS {angstrom}
+ 5.8 0.0 0.0
+ 0.0 6.19425540319 0.0
+ 0.0 0.0 26.1942554032

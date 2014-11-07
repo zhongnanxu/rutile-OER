@@ -1,0 +1,79 @@
+&CONTROL
+ calculation = 'relax'
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home-research/zhongnanxu/pseudopotentials/gbrv_espresso_pseudo_v1.01'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 32
+ ntyp = 3
+ nbnd = 346
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 1
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 7.5
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+ mixing_beta = 0.3
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Mo1 95.94 mo_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37154 0 0 1
+ O0 0.00000 0.50000 0.38342 0 0 1
+ Mo1 0.25000 0.50000 0.44154 0 0 1
+ Mo1 0.00000 0.00000 0.44306 0 0 1
+ O0 0.25000 0.78000 0.44274 0 0 1
+ O0 0.25000 0.22000 0.44275 0 0 1
+ O0 0.00000 0.50000 0.49612 0 0 1
+ O0 0.00000 0.00000 0.51590 0 0 1
+ Mo1 0.25000 0.00000 0.57241 0 0 1
+ Mo1 0.00000 0.50000 0.56916 0 0 1
+ O0 0.25000 0.72000 0.57237 0 0 1
+ O0 0.25000 0.28000 0.57242 0 0 1
+ O0 0.00000 0.00000 0.62453 0 0 1
+ O0 0.50000 0.00000 0.36896 0 0 1
+ O0 0.50000 0.50000 0.38279 0 0 1
+ Mo1 0.75000 0.50000 0.44136 0 0 1
+ Mo1 0.50000 0.00000 0.44105 0 0 1
+ O0 0.75000 0.78000 0.44275 0 0 1
+ O0 0.75000 0.22000 0.44254 0 0 1
+ O0 0.50000 0.50000 0.50161 0 0 1
+ O0 0.50000 0.00000 0.51640 0 0 1
+ Mo1 0.75000 0.00000 0.57567 0 0 1
+ Mo1 0.50000 0.50000 0.57139 0 0 1
+ O0 0.75000 0.72000 0.57222 0 0 1
+ O0 0.75000 0.28000 0.57220 0 0 1
+ O0 0.50000 0.00000 0.62487 0 0 1
+ H2 -0.00182 0.61508 0.36262 1 1 1
+ H2 0.49891 0.61318 0.36126 1 1 1
+ H2 0.16396 0.02188 0.35619 1 1 1
+ H2 0.66769 0.02165 0.35527 1 1 1
+ O0 0.50236 0.50023 0.64179 1 0 1
+ H2 0.39344 0.49554 0.67045 1 0 1
+CELL_PARAMETERS {angstrom}
+ 5.46 0.0 0.0
+ 0.0 7.00035713375 0.0
+ 0.0 0.0 27.0003571337

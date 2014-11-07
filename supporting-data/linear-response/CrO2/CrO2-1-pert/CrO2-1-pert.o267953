@@ -1,0 +1,14 @@
+---------------------------------------
+Running PBS batch system epilogue script
+Job id: 267953.audhumbla.fysik.dtu.dk
+Username: zhonxu
+Groupname: campgst
+Jobname: linear-response/CrO2-1-pert
+Sessionid: 31171
+Resources limits: neednodes=2:ppn=8:xeon8,nodes=2:ppn=8:xeon8,walltime=48:00:00
+Resources used: cput=206:00:53,mem=8046112kb,vmem=11441100kb,walltime=21:04:36
+Queuename: verylong
+Accounting:
+This job has allocated the following 16 nodes:
+d049 d049 d049 d049 d049 d049 d049 d049 d044 d044 d044 d044 d044 d044 d044 d044
+Finished epilogue job 267953.audhumbla.fysik.dtu.dk for zhonxu

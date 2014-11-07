@@ -1,0 +1,81 @@
+&CONTROL
+ calculation = 'relax'
+ tstress = .True.
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home/camp/zhonxu/pseudo'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 33
+ ntyp = 3
+ nbnd = 355
+ tot_magnetization = 23
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0.6
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 0.5
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Mn1 54.938 mn_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37896 0 0 1
+ O0 0.00000 0.50000 0.40035 0 0 1
+ Mn1 0.25000 0.50000 0.45160 0 0 1
+ Mn1 0.00000 0.00000 0.45007 0 0 1
+ O0 0.25000 0.80000 0.44974 0 0 1
+ O0 0.25000 0.20000 0.45117 0 0 1
+ O0 0.00000 0.50000 0.49774 0 0 1
+ O0 0.00000 0.00000 0.52454 0 0 1
+ Mn1 0.25000 0.00000 0.57379 0 0 1
+ Mn1 0.00000 0.50000 0.56795 0 0 1
+ O0 0.25000 0.70000 0.57497 0 0 1
+ O0 0.25000 0.30000 0.57846 0 0 1
+ O0 0.00000 0.00000 0.61755 0 0 1
+ O0 0.50000 0.00000 0.37912 0 0 1
+ O0 0.50000 0.50000 0.40048 0 0 1
+ Mn1 0.75000 0.50000 0.45160 0 0 1
+ Mn1 0.50000 0.00000 0.45031 0 0 1
+ O0 0.75000 0.80000 0.44971 0 0 1
+ O0 0.75000 0.20000 0.45123 0 0 1
+ O0 0.50000 0.50000 0.49860 0 0 1
+ O0 0.50000 0.00000 0.52452 0 0 1
+ Mn1 0.75000 0.00000 0.57380 0 0 1
+ Mn1 0.50000 0.50000 0.57874 0 0 1
+ O0 0.75000 0.70000 0.57497 0 0 1
+ O0 0.75000 0.30000 0.57847 0 0 1
+ O0 0.50000 0.00000 0.61706 0 0 1
+ H2 0.00006 0.64619 0.38385 1 1 1
+ H2 0.50002 0.64614 0.38395 1 1 1
+ H2 0.16151 0.03629 0.36719 1 1 1
+ H2 0.66153 0.03625 0.36735 1 1 1
+ O0 0.49986 0.53846 0.64810 1 1 1
+ O0 0.50029 0.34511 0.67860 1 1 1
+ H2 0.49986 0.41339 0.71277 1 1 1
+CELL_PARAMETERS {angstrom}
+ 5.68 0.0 0.0
+ 0.0 6.16597113195 0.0
+ 0.0 0.0 26.1659711319

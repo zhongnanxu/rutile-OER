@@ -1,0 +1,79 @@
+&CONTROL
+ calculation = 'relax'
+ tstress = .True.
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home/camp/zhonxu/pseudo'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 31
+ ntyp = 3
+ nbnd = 345
+ tot_magnetization = 22
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0.6
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 6
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Mn1 54.938 mn_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37343 0 0 1
+ O0 0.00000 0.50000 0.39460 0 0 1
+ Mn1 0.25000 0.50000 0.44744 0 0 1
+ Mn1 0.00000 0.00000 0.44714 0 0 1
+ O0 0.25000 0.80000 0.44578 0 0 1
+ O0 0.25000 0.20000 0.44934 0 0 1
+ O0 0.00000 0.50000 0.49498 0 0 1
+ O0 0.00000 0.00000 0.52558 0 0 1
+ Mn1 0.25000 0.00000 0.57494 0 0 1
+ Mn1 0.00000 0.50000 0.57360 0 0 1
+ O0 0.25000 0.70000 0.58309 0 0 1
+ O0 0.25000 0.30000 0.58346 0 0 1
+ O0 0.00000 0.00000 0.62352 0 0 1
+ O0 0.50000 0.00000 0.37327 0 0 1
+ O0 0.50000 0.50000 0.39443 0 0 1
+ Mn1 0.75000 0.50000 0.44743 0 0 1
+ Mn1 0.50000 0.00000 0.44689 0 0 1
+ O0 0.75000 0.80000 0.44579 0 0 1
+ O0 0.75000 0.20000 0.44937 0 0 1
+ O0 0.50000 0.50000 0.49726 0 0 1
+ O0 0.50000 0.00000 0.52569 0 0 1
+ Mn1 0.75000 0.00000 0.57494 0 0 1
+ Mn1 0.50000 0.50000 0.57348 0 0 1
+ O0 0.75000 0.70000 0.58312 0 0 1
+ O0 0.75000 0.30000 0.58345 0 0 1
+ O0 0.50000 0.00000 0.62411 0 0 1
+ H2 0.00057 0.64848 0.37924 1 1 1
+ H2 0.50056 0.64765 0.37884 1 1 1
+ H2 0.16125 0.04393 0.36291 1 1 1
+ H2 0.66118 0.04452 0.36284 1 1 1
+ O0 0.49986 0.50054 0.64720 1 1 1
+CELL_PARAMETERS {angstrom}
+ 5.68 0.0 0.0
+ 0.0 6.16597113195 0.0
+ 0.0 0.0 26.1659711319

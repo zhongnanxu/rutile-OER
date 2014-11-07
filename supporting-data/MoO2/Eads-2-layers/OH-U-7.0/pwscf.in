@@ -1,0 +1,78 @@
+&CONTROL
+ calculation = 'relax'
+ tprnfor = .True.
+ disk_io = 'none'
+ pseudo_dir = '/home-research/zhongnanxu/pseudopotentials/gbrv_espresso_pseudo_v1.01'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 32
+ ntyp = 3
+ nbnd = 346
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 1
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 7
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Mo1 95.94 mo_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37020 0 0 1
+ O0 0.00000 0.50000 0.38373 0 0 1
+ Mo1 0.25000 0.50000 0.44196 0 0 1
+ Mo1 0.00000 0.00000 0.44234 0 0 1
+ O0 0.25000 0.78000 0.44307 0 0 1
+ O0 0.25000 0.22000 0.44281 0 0 1
+ O0 0.00000 0.50000 0.49672 0 0 1
+ O0 0.00000 0.00000 0.51594 0 0 1
+ Mo1 0.25000 0.00000 0.57722 0 0 1
+ Mo1 0.00000 0.50000 0.56876 0 0 1
+ O0 0.25000 0.72000 0.57157 0 0 1
+ O0 0.25000 0.28000 0.57170 0 0 1
+ O0 0.00000 0.00000 0.62442 0 0 1
+ O0 0.50000 0.00000 0.37017 0 0 1
+ O0 0.50000 0.50000 0.38361 0 0 1
+ Mo1 0.75000 0.50000 0.44170 0 0 1
+ Mo1 0.50000 0.00000 0.44161 0 0 1
+ O0 0.75000 0.78000 0.44280 0 0 1
+ O0 0.75000 0.22000 0.44307 0 0 1
+ O0 0.50000 0.50000 0.50180 0 0 1
+ O0 0.50000 0.00000 0.51542 0 0 1
+ Mo1 0.75000 0.00000 0.57032 0 0 1
+ Mo1 0.50000 0.50000 0.57141 0 0 1
+ O0 0.75000 0.72000 0.57138 0 0 1
+ O0 0.75000 0.28000 0.57134 0 0 1
+ O0 0.50000 0.00000 0.62437 0 0 1
+ H2 0.00181 0.62200 0.36565 1 1 1
+ H2 0.49820 0.60827 0.36058 1 1 1
+ H2 0.16389 0.02302 0.35504 1 1 1
+ H2 0.66424 0.02032 0.35482 1 1 1
+ O0 0.49895 0.50023 0.64151 1 0 1
+ H2 0.40601 0.49554 0.67230 1 0 1
+CELL_PARAMETERS {angstrom}
+ 5.46 0.0 0.0
+ 0.0 7.00035713375 0.0
+ 0.0 0.0 27.0003571337

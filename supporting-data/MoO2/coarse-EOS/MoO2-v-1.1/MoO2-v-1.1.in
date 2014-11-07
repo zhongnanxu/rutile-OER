@@ -1,0 +1,46 @@
+&CONTROL
+ calculation = 'vc-relax'
+ disk_io = 'none'
+ pseudo_dir = '/home/camp/zhonxu/pseudo'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 6
+ ntyp = 2
+ nbnd = 78
+ starting_magnetization(1) = 0.6
+ starting_magnetization(2) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 2
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+ cell_dofree = 'shape'
+/
+K_POINTS {automatic}
+ 5 5 5 0 0 0
+ATOMIC_SPECIES
+ Mo0 95.94 mo_pbe_v1.uspp.F.UPF
+ O1 15.9994 o_pbe_v1.01.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ Mo0 0.00000 0.00000 0.00000 0 0 0
+ Mo0 0.50000 0.50000 0.50000 0 0 0
+ O1 0.30500 0.30500 0.00000 1 1 0
+ O1 -0.30500 -0.30500 0.00000 1 1 0
+ O1 0.80500 0.19500 0.50000 1 1 0
+ O1 0.19500 0.80500 0.50000 1 1 0
+CELL_PARAMETERS {angstrom}
+ 4.73005615666 0.0 0.0
+ 0.0 4.73005615666 0.0
+ 0.0 0.0 3.04825841207

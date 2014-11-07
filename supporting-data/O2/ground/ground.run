@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=2:00:00
+#PBS -j oe
+#PBS -N O2/ground
+#PBS -l nodes=1:ppn=1
+
+cd $PBS_O_WORKDIR
+/home/opt/el6/dl160g6/espresso-5.0.3-dl160g6-tm-gfortran-openmpi-1.6.3-acml-4.4.0-1/bin/pw.x < ground.in | tee ground.out
+eclean
+# end

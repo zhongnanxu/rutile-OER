@@ -1,0 +1,72 @@
+
+     Program PWSCF v.5.0.2 (svn rev. 9656) starts on 29Apr2014 at  8: 7: 6 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote.php
+
+     Parallel version (MPI), running on    16 processors
+     K-points division:     npool     =       4
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Reading input from pwscf.in
+Warning: card &CELL ignored
+Warning: card / ignored
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine setup (1):
+     lda_plus_u calculation but Hubbard_l not set
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD 
+with errorcode 0.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 6 with PID 28171 on
+node a096.dcsc.fysik.dtu.dk exiting improperly. There are two reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+[a096.dcsc.fysik.dtu.dk:28163] 15 more processes have sent help message help-mpi-api.txt / mpi-abort
+[a096.dcsc.fysik.dtu.dk:28163] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+---------------------------------------
+Running PBS batch system epilogue script
+Job id: 340433.audhumbla.fysik.dtu.dk
+Username: zhonxu
+Groupname: campgst
+Jobname: RuO2/Eads-2-layers/O-U-0.0
+Sessionid: 28096
+Resources limits: neednodes=2:ppn=8:xeon8,nodes=2:ppn=8:xeon8,walltime=48:00:00
+Resources used: cput=00:00:02,mem=740kb,vmem=8648kb,walltime=00:00:02
+Queuename: verylong
+Accounting:
+This job has allocated the following 16 nodes:
+a096 a096 a096 a096 a096 a096 a096 a096 a039 a039 a039 a039 a039 a039 a039 a039
+Finished epilogue job 340433.audhumbla.fysik.dtu.dk for zhonxu

@@ -1,0 +1,13 @@
+&input_mat
+  ntyp = 2
+  na(1) = 16
+  na(2) = 32
+  nalfa = 5
+  magn = .True.
+  filepos = 'pos'
+  back = 'no'
+  filednda = 'dnda'
+  n1 = 1
+  n2 = 1
+  n3 = 1
+&end

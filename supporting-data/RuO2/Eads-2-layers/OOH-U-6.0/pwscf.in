@@ -1,0 +1,80 @@
+&CONTROL
+ calculation = 'relax'
+ tprnfor = .True.
+ outdir = '/scratch/1089128.gilgamesh.cheme.cmu.edu'
+ disk_io = 'none'
+ pseudo_dir = '/home-research/zhongnanxu/pseudopotentials/gbrv_espresso_pseudo_v1.01'
+/
+&SYSTEM
+ ibrav = 0
+ nat = 33
+ ntyp = 3
+ nbnd = 379
+ starting_magnetization(1) = 0
+ starting_magnetization(2) = 0
+ starting_magnetization(3) = 0
+ ecutwfc = 40
+ ecutrho = 500
+ occupations = 'smearing'
+ degauss = 0.01
+ smearing = 'mp'
+ nspin = 1
+ lda_plus_u = .True.
+ Hubbard_U(1) = 0
+ Hubbard_U(2) = 6
+ Hubbard_U(3) = 0
+ Hubbard_alpha(1) = 0
+ Hubbard_alpha(2) = 0
+ Hubbard_alpha(3) = 0
+ U_projection_type = 'atomic'
+/
+&ELECTRONS
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {automatic}
+ 4 4 1 0 0 0
+ATOMIC_SPECIES
+ O0 15.9994 o_pbe_v1.01.uspp.F.UPF
+ Ru1 101.07 ru_pbe_v1.uspp.F.UPF
+ H2 1.00794 h_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ O0 0.00000 0.00000 0.37991 0 0 1
+ O0 0.00000 0.50000 0.40476 0 0 1
+ Ru1 0.25000 0.50000 0.45366 0 0 1
+ Ru1 0.00000 0.00000 0.45320 0 0 1
+ O0 0.25000 0.81000 0.45291 0 0 1
+ O0 0.25000 0.19000 0.45273 0 0 1
+ O0 0.00000 0.50000 0.50061 0 0 1
+ O0 0.00000 0.00000 0.52597 0 0 1
+ Ru1 0.25000 0.00000 0.58056 0 0 1
+ Ru1 0.00000 0.50000 0.56942 0 0 1
+ O0 0.25000 0.69000 0.57696 0 0 1
+ O0 0.25000 0.31000 0.57940 0 0 1
+ O0 0.00000 0.00000 0.61773 0 0 1
+ O0 0.50000 0.00000 0.37906 0 0 1
+ O0 0.50000 0.50000 0.40198 0 0 1
+ Ru1 0.75000 0.50000 0.45358 0 0 1
+ Ru1 0.50000 0.00000 0.45234 0 0 1
+ O0 0.75000 0.81000 0.45289 0 0 1
+ O0 0.75000 0.19000 0.45286 0 0 1
+ O0 0.50000 0.50000 0.50075 0 0 1
+ O0 0.50000 0.00000 0.52513 0 0 1
+ Ru1 0.75000 0.00000 0.57272 0 0 1
+ Ru1 0.50000 0.50000 0.57878 0 0 1
+ O0 0.75000 0.69000 0.57314 0 0 1
+ O0 0.75000 0.31000 0.57518 0 0 1
+ O0 0.50000 0.00000 0.61598 0 0 1
+ H2 -0.00009 0.60181 0.37690 1 1 1
+ H2 0.49965 0.63155 0.38253 1 1 1
+ H2 0.14740 0.02395 0.36747 1 1 1
+ H2 0.64700 0.02619 0.36665 1 1 1
+ O0 0.50007 0.52929 0.65003 0 1 1
+ O0 0.49999 0.33800 0.67922 0 1 1
+ H2 0.49996 0.39848 0.71361 0 1 1
+CELL_PARAMETERS {angstrom}
+ 6.24 0.0 0.0
+ 0.0 6.40638743755 0.0
+ 0.0 0.0 26.4063874376
